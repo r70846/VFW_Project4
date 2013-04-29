@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--   Russell Gaspard     		   -->
+<!--   VFW 1304, Project 3 	       -->
+<!--   Musician List, Add Musician -->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="An app that stores and lists musician contacts..." />
+		<meta name="keywords" content="musicians, contacts, add" />		
+		<meta name="robots" content="noindex, nofollow" />	
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />	
+		<meta name="HandheldFriendly" content="True" />			
+		<meta name="MobileOptimized" content="320" />	
+
+		<title>Musician List - Add Musician</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<a href="#" id="clearDataLink" >Clear All</a>
+			<a href="#" id="displayDataLink" >Display All</a>
+			<a href="javascript: window.location.reload();" id="addAnother" style="display:none;">Add Another</a>
+
+		</header>
+		<form action="#" method="post" id="theForm">
+			<fieldset>
+				<legend>Add Musician</legend>
+				<span id="required">( * required fields )</span>
+				<ul id="errors"></ul>
+				<ul id="fields">
+					<li><label for="fname">* First Name:</label><input type="text" id="fname" /></li>
+					<li><label for="lname">* Last Name:</label><input type="text" id="lname" /></li>	
+					<li><label for="phone">* Phone:</label><input type="text" id="phone" placeholder="XXX-XXX-XXXX"/></li>
+					<li><label for="email">* Email:</label><input type="email" id="email" /></li>
+					
+					<li id="pSelect">
+						<label for="primary">* Primary Instrument:</label>
+					</li>
+					
+					
+					<li>Additional Instruments:
+						<ul>
+							<li><input type="checkbox" value="Guitar" id="guitar" name="all"/><label for="guitar">Guitar</label></li>
+							<li><input type="checkbox" value="Bass" id="bass" name="all"/><label for="bass">Bass</label></li>
+							<li><input type="checkbox" value="Drums" id="drums" name="all"/><label for="drums">Drums</label></li>
+							<li><input type="checkbox" value="Keys" id="keys" name="all"/><label for="keys">Keys</label></li>
+							<li><input type="checkbox" value="Vocals" id="vocals" name="all"/><label for="vocals">Vocals</label></li>
+							<li><input type="checkbox" value="Other" id="other" name="all"/><label for="other">Other</label></li>
+						</ul>
+					</li>
+
+					<li><label for="rating">Rating:</label><input type="range" id="rating"" min="1" max="10"></input></li>
+					<li><label for="lgig">Last Gig:</label><input type="date" id="lgig"></input></li>	
+					<li><label for="notes">Notes:</label><textarea id="notes"></textarea>
+					<li><input type="hidden" value="True"></li>
+				</ul>
+				<button id="submit">Submit</button>
+			</fieldset>
+		</form>
+		<div id="musicians"></div>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
+			
+</html>
