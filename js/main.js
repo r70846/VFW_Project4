@@ -1,5 +1,5 @@
 // Russell Gaspard
-// Project 3
+// Project 4
 // Visual Frameworks - VFW 1304
 // Mobile Development
 // Full Sail University
@@ -92,7 +92,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Display Data
 	function displayData(){
 		if(localStorage.length === 0){
-			alert("No musician data has been saved.");
+			alert("No musician data has been saved. Default data has been loaded.");
+			loadDefaults();
+			displayData();
 		}else{
 			controlToggle("on");
 		}
@@ -146,6 +148,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		linkDelete.innerHTML = "Delete";
 		li.appendChild(linkDelete);
 	}
+	
+	//Auto fill JASON to local storage
+	function loadDefaults(){
+		//This data comes from the json.js file referenced in the html file
+		for(var m in json){
+			var randomID = Math.floor(Math.random()*100000); //Make new key
+		localStorage.setItem(randomID, JSON.stringify(json[m]));
+		}
+	}
+	
 	
 	//Retrieve specific musician's data from local storage and it load back into the form
 	function editMusician(){
