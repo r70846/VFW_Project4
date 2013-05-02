@@ -116,6 +116,9 @@ window.addEventListener("DOMContentLoaded", function(){
 			var data = JSON.parse(value);
 			var newSubList = document.createElement("ul");
 			newItem.appendChild(newSubList);
+			
+			displayImage(data.primary[1], newSubList);
+			
 			for(var n in data){
 				var newSubItem = document.createElement("li");
 				newSubList.appendChild(newSubItem);
@@ -128,6 +131,16 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 			createItemLinks(key, newLinksItem); //Create links for each item
 		}
+	}
+	
+	//get the correct image for musicians primary instruments
+	function displayImage(instrument, newSubList){
+		var imageListItem = document.createElement("li");
+		newSubList.appendChild(imageListItem);
+		var newImage = document.createElement("img");
+		newImage.setAttribute("src", "img/" + instrument + ".gif");
+		imageListItem.appendChild(newImage);
+	
 	}
 	
 	//Will make the edit and delete options for each musician when displayed
