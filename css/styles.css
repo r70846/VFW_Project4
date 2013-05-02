@@ -50,20 +50,46 @@ legend{
 	font-size:24px;
 }
 
-
 button {
 	background:#C0C0C0;
 	font-size:16px;
-	margin-left:80px;
+	margin-top:10px;
+	margin-left:225px;
 }
 
 input{
 	background: #ffffcc;
 }
 
+[type='text'],[type='email'],[type='date'],[type='range']{
+	display:block;
+	width:250px;
+	margin-bottom:10px;
+}
+
 textarea{
 	background: #ffffcc;
 	display:block;
+	width:250px;
+}
+
+select{
+	background: #ffffcc;
+	display:block;
+	width:250px;
+	font-size:16px;
+	margin-bottom:20px;
+}
+
+table{
+	margin-bottom:20px;
+	background:#ffffcc;
+	border: 1px solid black;
+	width:250px;
+}
+
+img{
+	margin-top:10px;
 }
 
 div{
@@ -72,11 +98,7 @@ div{
 	overflow:scroll;
 }
    
-select{
-	display:block;
-	margin-bottom:20px;
-}
-   
+
 ul{
 	list-style: none;
 }

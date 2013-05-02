@@ -39,16 +39,15 @@
 						<label for="primary">* Primary Instrument:</label>
 					</li>
 					
-					
 					<li>Additional Instruments:
-						<ul>
-							<li><input type="checkbox" value="Guitar" id="guitar" name="all"/><label for="guitar">Guitar</label></li>
-							<li><input type="checkbox" value="Bass" id="bass" name="all"/><label for="bass">Bass</label></li>
-							<li><input type="checkbox" value="Drums" id="drums" name="all"/><label for="drums">Drums</label></li>
-							<li><input type="checkbox" value="Keys" id="keys" name="all"/><label for="keys">Keys</label></li>
-							<li><input type="checkbox" value="Vocals" id="vocals" name="all"/><label for="vocals">Vocals</label></li>
-							<li><input type="checkbox" value="Other" id="other" name="all"/><label for="other">Other</label></li>
-						</ul>
+						<table>
+							<tr><td><input type="checkbox" value="Guitar" id="guitar" name="all"/><label for="guitar">Guitar</label></td>
+								<td><input type="checkbox" value="Bass" id="bass" name="all"/><label for="bass">Bass</label></td>
+								<td><input type="checkbox" value="Drums" id="drums" name="all"/><label for="drums">Drums</label></td></tr>
+							<tr><td><input type="checkbox" value="Keys" id="keys" name="all"/><label for="keys">Keys</label></td>
+								<td><input type="checkbox" value="Vocals" id="vocals" name="all"/><label for="vocals">Vocals</label></td>
+								<td><input type="checkbox" value="Other" id="other" name="all"/><label for="other">Other</label></td></tr>
+						</table>
 					</li>
 
 					<li><label for="rating">Rating:</label><input type="range" id="rating"" min="1" max="10"></input></li>

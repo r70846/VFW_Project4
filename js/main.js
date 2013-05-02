@@ -107,9 +107,11 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		id("musicians").style.display = "block";
 		for(i=0, j=localStorage.length; i<j; i++){
+			var hr =document.createElement("hr");
 			var newItem = document.createElement("li");
 			var newLinksItem = document.createElement("li");
 			newLinksItem.setAttribute("id", "buttons");
+			newList.appendChild(hr);		
 			newList.appendChild(newItem);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
