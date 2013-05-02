@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 		pSelect.appendChild(newSelect);
 	};
-	
+
 	//find which checkboxes are checked
 	function getAllInstruments(){
 		var checks = document.forms[0].all;
@@ -191,13 +191,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		id('primary').value = entry.primary[1];
 		checkAllInstruments(entry.all); //Fill Checkboxes
 		id('rating').value = entry.rating[1];
+		id('range').innerHTML = entry.rating[1]; //Display Range Property
 		id('lgig').value = entry.lgig[1];
 		id('notes').value = entry.notes[1];
 		
-		//Remove Initial Event Listener, Rename button, new event listener
-		storeDataButton.removeEventListener("click", saveData);
+		//NOTE: No longer any need to remove and replace listener, already triggers 'validate'
+		//storeDataButton.removeEventListener("click", saveData); 
+		//storeDataButton.addEventListener("click", validate);
+		
+		//Rename button
 		storeDataButton.innerHTML = "Edit";
-		storeDataButton.addEventListener("click", validate);
 		storeDataButton.key = this.key; //Save key value to the 'save/edit' button
 	}
 	
@@ -335,6 +338,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
+	
+	// React to Rating Slider Change
+	function newRange(){
+		var range = id("range");
+		range.innerHTML = this.value;
+	}
+	
+	
 	//Primary Instrument Values
 	var pInstrument = [" -Primary Instrument- ","Guitar", "Bass", "Drums", "Keys", "Vocals", "Other"];
 	var instruments;
@@ -351,6 +362,11 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	var storeDataButton = id("submit");
 	storeDataButton.addEventListener("click", validate);	
+	
+	//Get Rating Event
+	var slider = id("rating");
+	slider.addEventListener("change", newRange);	
+	
 });
 
 

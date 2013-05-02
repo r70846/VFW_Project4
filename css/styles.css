@@ -67,6 +67,16 @@ input{
 	margin-bottom:10px;
 }
 
+#range{
+	display:inline;
+	width:100px;
+	background:#ffffcc;
+	border: 1px solid black;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:10px;
+}
+
 textarea{
 	background: #ffffcc;
 	display:block;
@@ -92,7 +102,7 @@ img{
 	margin-top:10px;
 }
 
-div{
+div#musicians{
 	border: 1px solid #C0C0C0;
 	background: #f8f8f8;
 	overflow:scroll;
