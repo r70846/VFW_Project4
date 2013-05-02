@@ -73,12 +73,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Compile form data into an object - properties include array with label and value.
 		var entry		={};
 
-		entry.fname		= ["First Name:", id("fname").value];	
+		entry.fname		= ["First Name:", id("fname").value];
 		entry.lname		= ["Last Name:", id("lname").value];
-		entry.phone		= ["Phone:", id("phone").value];	
-		entry.email		= ["Email:", id("email").value];			
+		entry.phone		= ["Phone:", id("phone").value];
+		entry.email		= ["Email:", id("email").value];
 		entry.primary	= ["Primary Instrument:", id("primary").value];
-		entry.all		= getAllInstruments();			
+		entry.all		= getAllInstruments();
 		entry.rating	= ["Rating:", id("rating").value];
 		entry.lgig		= ["Last Gig:", id("lgig").value];
 		entry.notes		= ["Notes:", id("notes").value];
@@ -98,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}else{
 			controlToggle("on");
 		}
-		var newDiv =document.createElement("div");
+		var newDiv = document.createElement("div");
 		var oldDiv = id("musicians");
 		document.body.replaceChild(newDiv,oldDiv)
 		newDiv.setAttribute("id","musicians");
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		id("musicians").style.display = "block";
 		for(i=0, j=localStorage.length; i<j; i++){
-			var hr =document.createElement("hr");
+			var hr = document.createElement("hr");
 			var newItem = document.createElement("li");
 			var newLinksItem = document.createElement("li");
 			newLinksItem.setAttribute("id", "buttons");
